@@ -18,7 +18,7 @@
 			embedded_svc.settings.displayHelpButton = true; //Or false
 			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 			embedded_svc.settings.prepopulatedPrechatFields = {
-				FirstName: "<First_Name_Here>",
+				FirstName: "customer",
 				LastName: "<Last_Name_Here>"
 			};
 			embedded_svc.settings.extraPrechatInfo = [{
@@ -45,6 +45,21 @@
 				}],
 				"entityName":"Contact",
 				"linkToEntityName": ""
+			},
+			{
+				"entityFieldMaps": [{
+				"doCreate":true,
+				"doFind":false,
+				"fieldName":"SuppliedEmail",
+				"label":"Email"
+				},
+				{
+				"doCreate":true,
+				"doFind":false,
+				"fieldName":"SuppliedName",
+				"label":"Name"
+				}],
+				"entityName":"Case",
 			}];
 	
 			//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
